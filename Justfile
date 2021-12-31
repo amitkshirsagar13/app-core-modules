@@ -9,3 +9,4 @@ clean install:
 
 install-only:
   mvn clean install -Dmaven.test.skip=true --no-transfer-progress
+
