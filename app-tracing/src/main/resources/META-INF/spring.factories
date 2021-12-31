@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  io.k8cluster.microservices.modules.tracing.TracingAutoConfiguration
+org.springframework.boot.autoconfigure.AutoConfigureBefore=\
+  io.k8cluster.microservices.modules.config.logging.LoggingAutoConfiguration,\
+  io.k8cluster.microservices.modules.config.aws.AwsEnvironmentModuleAutoConfiguration

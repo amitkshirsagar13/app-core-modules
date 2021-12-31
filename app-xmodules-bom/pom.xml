@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.k8cluster.microservices.modules</groupId>
+        <artifactId>app-core-modules</artifactId>
+        <relativePath>../pom.xml</relativePath>
+        <version>current-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>app-xmodules-bom</artifactId>
+    <version>current-SNAPSHOT</version>
+    <name>app-xmodules-bom</name>
+    <packaging>pom</packaging>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.k8cluster.microservices.modules</groupId>
+                <artifactId>aws-environment</artifactId>
+                <version>current-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.k8cluster.microservices.modules</groupId>
+                <artifactId>app-tracing</artifactId>
+                <version>current-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.k8cluster.microservices.modules</groupId>
+                <artifactId>app-logging</artifactId>
+                <version>current-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.k8cluster.microservices.modules</groupId>
+                <artifactId>app-exception</artifactId>
+                <version>current-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.k8cluster.microservices.modules</groupId>
+                <artifactId>app-access</artifactId>
+                <version>current-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
