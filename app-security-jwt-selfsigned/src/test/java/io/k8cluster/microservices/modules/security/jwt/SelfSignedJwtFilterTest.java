@@ -2,6 +2,7 @@ package io.k8cluster.microservices.modules.security.jwt;
 
 import com.auth0.jwt.impl.PublicClaims;
 import io.k8cluster.microservices.modules.security.jwt.helpers.OAuthLoginHelper;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.tuple.Pair;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -39,6 +40,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+@Slf4j
 @SpringBootTest
 @RunWith(SpringRunner.class)
 @AutoConfigureMockMvc
@@ -72,6 +74,7 @@ public class SelfSignedJwtFilterTest {
 
         String testSubjectName = "unknown-user@some-domain.com";
         String token = loginHelper.login(testSubjectName);
+        log.info("SelfSigned Token: {}", token);
         when(request.getHeader(eq(AuthHeaders.AUTHORIZATION_HEADER))).thenReturn(token);
 
         jwtFilter.doFilterInternal(request, null, new EmptyChain());

@@ -23,6 +23,16 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>io.k8cluster.microservices.modules</groupId>
+            <artifactId>app-exception</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.k8cluster.microservices.modules</groupId>
+            <artifactId>app-access</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>

@@ -71,11 +71,6 @@ public class SecurityTokenConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
-
-    @Bean
     @ConditionalOnMissingBean(TokenValidator.class)
     public TokenValidator tokenValidator(OAuthApplicationsConfig oAuthApplicationsConfig, JWTVerifierCache jwtVerifierCache) {
         Assert.notNull(oAuthApplicationsConfig, String.format("Missing required configurations for OAuth security applications"));
