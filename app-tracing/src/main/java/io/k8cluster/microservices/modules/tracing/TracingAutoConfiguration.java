@@ -40,7 +40,7 @@ public class TracingAutoConfiguration {
 
     @Bean
     @ConditionalOnProperty(name = "app.modules.tracing.jaeger.enabled", havingValue = "true")
-    public JaegerTracer tracer(RemoteReporter remoteReporter, Sampler sampler) throws UnknownHostException{
+    public JaegerTracer tracer(RemoteReporter remoteReporter, Sampler sampler) throws UnknownHostException {
         String hostAddress = InetAddress.getLocalHost().getHostName();
         return new JaegerTracer.Builder(SERVICE_NAME)
                 .withTag("ServiceName", SERVICE_NAME)
