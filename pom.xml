@@ -29,6 +29,7 @@
         <module>app-base-model</module>
         <module>app-security-jwt-filter</module>
         <module>app-security-jwt-selfsigned</module>
+        <module>app-service</module>
     </modules>
 
 </project>
