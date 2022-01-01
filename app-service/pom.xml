@@ -20,6 +20,21 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.k8cluster.microservices.modules</groupId>
+            <artifactId>app-logging</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.k8cluster.microservices.modules</groupId>
+            <artifactId>app-tracing</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.k8cluster.microservices.modules</groupId>
+            <artifactId>app-access</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.k8cluster.microservices.modules</groupId>
+            <artifactId>app-exception</artifactId>
+        </dependency>
     </dependencies>
-
 </project>

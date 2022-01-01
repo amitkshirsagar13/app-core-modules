@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-    io.k8cluster.microservices.modules.config.logging.LoggingAutoConfiguration
+    io.k8cluster.microservices.modules.logging.config.LoggingAutoConfiguration

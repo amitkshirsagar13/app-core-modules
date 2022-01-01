@@ -1,9 +1,9 @@
-package io.k8cluster.microservices.modules.config.logging;
+package io.k8cluster.microservices.modules.logging.config;
 
-import io.k8cluster.microservices.modules.config.logging.advice.AppExceptionHandlerController;
-import io.k8cluster.microservices.modules.config.logging.advice.GlobalExceptionHandlerController;
-import io.k8cluster.microservices.modules.config.logging.advice.RestClientExceptionHandlerController;
-import io.k8cluster.microservices.modules.config.logging.filter.TomcatApiLoggerFilter;
+import io.k8cluster.microservices.modules.logging.config.advice.AppExceptionHandlerController;
+import io.k8cluster.microservices.modules.logging.config.advice.GlobalExceptionHandlerController;
+import io.k8cluster.microservices.modules.logging.config.advice.RestClientExceptionHandlerController;
+import io.k8cluster.microservices.modules.logging.config.filter.TomcatApiLoggerFilter;
 import io.opentracing.Tracer;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;

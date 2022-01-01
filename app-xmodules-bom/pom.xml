@@ -57,6 +57,11 @@
                 <artifactId>app-security-jwt-selfsigned</artifactId>
                 <version>current-SNAPSHOT</version>
             </dependency>
+            <dependency>
+                <groupId>io.k8cluster.microservices.modules</groupId>
+                <artifactId>app-service</artifactId>
+                <version>current-SNAPSHOT</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>

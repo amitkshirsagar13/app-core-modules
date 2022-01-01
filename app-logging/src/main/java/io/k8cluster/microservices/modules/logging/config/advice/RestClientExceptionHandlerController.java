@@ -1,6 +1,6 @@
-package io.k8cluster.microservices.modules.config.logging.advice;
+package io.k8cluster.microservices.modules.logging.config.advice;
 
-import io.k8cluster.microservices.modules.config.logging.filter.BaseApiLogger;
+import io.k8cluster.microservices.modules.logging.config.filter.BaseApiLogger;
 import io.k8cluster.microservices.modules.exception.AppException;
 import io.k8cluster.microservices.modules.exception.ErrorDTO;
 import io.opentracing.Tracer;

@@ -1,4 +1,4 @@
-package io.k8cluster.microservices.modules.config.logging.filter;
+package io.k8cluster.microservices.modules.logging.config.filter;
 
 import io.k8cluster.microservices.modules.access.model.AccessData;
 import io.opentracing.util.GlobalTracer;

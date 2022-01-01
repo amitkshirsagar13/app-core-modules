@@ -1,12 +1,13 @@
-package io.k8cluster.microservices.modules.config.logging.advice;
+package io.k8cluster.microservices.modules.logging.config.advice;
 
-import io.k8cluster.microservices.modules.config.logging.filter.BaseApiLogger;
+import io.k8cluster.microservices.modules.logging.config.filter.BaseApiLogger;
 import io.k8cluster.microservices.modules.exception.AppException;
 import io.k8cluster.microservices.modules.exception.ErrorDTO;
 import io.opentracing.Tracer;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.MDC;
 import org.springframework.core.annotation.Order;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,19 +24,20 @@ import javax.servlet.http.HttpServletRequest;
  * and return an error message to the user.
  * In case the exception contains a cause, it will be logged as well.
  * <p>
+ * Unintentional Exception Flow
+ * where an unexpected exception is thrown it will be caught and logged by default in addition to a message sent to client
  */
 @Slf4j
 @RestControllerAdvice(basePackages = "io.k8cluster", annotations = RestController.class)
-@Order(1)
-public class AppExceptionHandlerController extends BaseHandlerController {
+@Order(4)
+public class GlobalExceptionHandlerController extends BaseHandlerController {
 
-    public AppExceptionHandlerController(Tracer tracer) {
+    public GlobalExceptionHandlerController(Tracer tracer) {
         super(tracer);
     }
-
-    @ExceptionHandler(AppException.class)
-    public ResponseEntity<ErrorDTO> handleAppException(AppException exception, HttpServletRequest request) {
-
-        return createResponseEntity(exception.getMessage(), exception, exception.getStatus(), exception.getErrorCode(), request, MDC.get(BaseApiLogger.CORRELATION_ID));
+    @ExceptionHandler(Throwable.class)
+    public ResponseEntity<ErrorDTO> handleThrowable(Throwable ex, HttpServletRequest request) {
+        return createResponseEntity(ex.toString(), ex, HttpStatus.INTERNAL_SERVER_ERROR,
+                AppException.ERROR_CODE.OTHER, request, MDC.get(BaseApiLogger.CORRELATION_ID));
     }
 }
