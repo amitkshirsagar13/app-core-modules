@@ -64,4 +64,5 @@
             <appender-ref ref="LOG-FILE"/>
         </root>
     </springProfile>
+    <logger name="io.jaegertracing.internal.reporters.LoggingReporter" level="WARN"/>
 </configuration>

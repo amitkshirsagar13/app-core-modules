@@ -1,3 +1,15 @@
 spring:
   application:
     name: app-service
+
+app:
+  modules:
+    tracing:
+      jaeger:
+        enabled: false
+        host: jaeger-agent.localtest.me
+        port: 6831
+        trace:
+          samplingRate: 1
+          flushInterval: 1000
+          maxQueueSize: 1000
