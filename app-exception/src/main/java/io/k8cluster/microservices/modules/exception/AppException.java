@@ -75,6 +75,7 @@ public class AppException extends RuntimeException {
         API_UNAUTHORIZED("0401", HttpStatus.UNAUTHORIZED),
         FORBIDDEN_AUTH_METHOD("0402", HttpStatus.FORBIDDEN),
         ACCESS_DENIED("0403", HttpStatus.UNAUTHORIZED),
+        UNPROCESSABLE_ENTITY("0422", HttpStatus.UNAUTHORIZED),
         OTHER("9999");
 
         private final String name;

@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.AutoConfigureBefore=io.k8cluster.microservices.modules.security.jwt.SecurityTokenConfig
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=io.k8cluster.microservices.modules.security.jwt.SelfSignedTokenValidatorConfig

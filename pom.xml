@@ -26,6 +26,9 @@
         <module>app-tracing</module>
         <module>app-logging</module>
         <module>app-aws-environment</module>
+        <module>app-base-model</module>
+        <module>app-security-jwt-filter</module>
+        <module>app-security-jwt-selfsigned</module>
     </modules>
 
 </project>
