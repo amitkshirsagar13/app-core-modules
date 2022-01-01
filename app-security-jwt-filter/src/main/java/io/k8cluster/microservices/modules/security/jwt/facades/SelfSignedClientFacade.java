@@ -30,8 +30,8 @@ public class SelfSignedClientFacade extends AbstractAuthClientFacade {
     public SelfSignedClientFacade(OAuthConfig authConfig) {
         super(authConfig);
         // in order to use one self signed tenant that will work for both AppAuthFilter, UserIdentityAuthFilter
-        // the domains of should contain 'appauth' to pass AppAuthFilter
-        Assert.isTrue(authConfig.getDomain().contains("appauth"), "SelfSigned token domain should contains 'appauth'");
+        // the domains of should contain 'k8cluster' to pass AppAuthFilter
+        Assert.isTrue(authConfig.getDomain().contains("k8cluster"), "SelfSigned token domain should contains 'appauth'");
     }
 
     @Override
